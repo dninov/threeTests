@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import './App.scss';
 
 import {Canvas, useFrame} from "react-three-fiber";
-import {softShadows} from "drei";
+import {softShadows, OrbitControls } from "drei";
 
 softShadows();
 const SpinningMesh = ({position, args, color}) =>{
@@ -55,7 +55,7 @@ function App() {
       <SpinningMesh position={[0,1,0]} args = {[3,2,1]} color = 'lightblue'/>
       <SpinningMesh position={[-2,1,-5]} color = "pink"/>
       <SpinningMesh position={[5,1,-2]} color = "pink"/>
-
+      <OrbitControls/>
     </Canvas>
   </>
   );
